@@ -38,7 +38,8 @@ body {
 
 
 a {
-    text-decoration: none; /* para quitar el subrayado del enlace */ 
+    text-decoration: none;
+    color: var(--negro) 
 }
 
 /* =========================
@@ -116,7 +117,7 @@ img {
 .logo{
     display: flex;
     align-items: center;
-    flex-shrink: 0; /* Nunca se achica */
+    flex-shrink: 0; 
 }
 
 .logo__imagen{
@@ -132,12 +133,17 @@ img {
     display: flex;
     align-items: center;
     gap: 3rem;
-    margin-left: 5rem; /* Separación del logo */
+    margin-left: 5rem;
 }
 
 .navegacion__enlace{
-    color: var(--primario);
+    color: #6b5a42;
     font-size: 1.8rem;
+    transition: color 0.2s ease;
+}
+
+.navegacion__enlace:hover{
+    color: #3d3226;
 }
 
     /* =========================
@@ -169,8 +175,8 @@ img {
     
     .submenu__enlace{
         padding: 1.2rem 1.8rem;
-        color: var(--primario);
-        white-space: nowrap;  /** separar las letras del texto **/      
+        color: #6b5a42;
+        white-space: nowrap;    
     }
     
     .submenu__enlace:hover{
@@ -181,20 +187,32 @@ img {
         display: flex;
     }
 
-/* =========================
-----       ICONOS         ----
-============================*/
-
-.iconos{
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-left: auto;
-}
-
-.iconos img{
-    width: 30px;
-}
+    /* =========================
+    ----       ICONOS         ----
+    ============================*/
+    
+    .iconos{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: auto;
+    }
+    
+    .icono-link{
+        color: #333; 
+        display: flex;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+    
+    .icono-link:hover{
+        color: #000; 
+        transform: translateY(-2px);
+    }
+    
+    .iconos svg{
+        width: 28px;
+        height: 28px;
+    }
 
 /* =========================
 ----       BANNER         ----
@@ -203,7 +221,7 @@ img {
 .banner {
     position: relative;
     width: 100%;
-    height: 1050px;
+    height: auto;
     overflow: hidden;
     margin-top: 20px;
 }
@@ -228,27 +246,49 @@ img {
 
 .contenido-banner {
     position: absolute;
-    top: 90%;
-    left: 15%;
-    transform: translateY(-50%);
+    bottom: 24px;
+    left: 24px;
     color: white;
     max-width: 100%;
 }
 
 
-.btn-banner {
-    display: inline-block; 
-    padding: 12px 24px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+/* ========================================
+----       BANNER TABLA DE TALLES   ----
+=============================================*/
+.banner-tablatalles{
+    margin-top: 15px; 
 }
 
-.btn-banner:hover {
-    background-color: #e6e6e6;
+
+.banner .slide{
+    position: relative;
 }
+
+.banner-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: #fff;
+    padding: 8px;
+}
+
+.banner-block{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 5;
+}
+
+.banner-block img,
+.banner-block video{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
 
 
 /* =========================
@@ -258,14 +298,14 @@ img {
 .categorias {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
     padding: 80px 5%;
     background-color: #f2f2f2;
     flex-wrap: wrap;
 }
 
 .categoria-card {
-    position: relative; /**  título sobre la imagen **/
+    position: relative;
     width: 360px;
 }
 
@@ -310,7 +350,19 @@ img {
 }
 
 .beneficio {
-    max-width: 300px;
+    max-width: 450px;
+    background-color: #fdf6f0; 
+    border-left: 5px solid #b89b72; 
+    border-radius: 12px;
+    padding: 25px 35px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .beneficio h3 {
@@ -365,7 +417,7 @@ img {
 }
 
 .footer-columna a:hover {
-    color: #fff; /** para que el enlace cambie de color al pasar el mouse por encima **/
+    color: #fff; 
 }
 
 .redes {
@@ -422,3 +474,14 @@ img {
         flex-direction:column;
     }
 }
+
+
+@media (max-width: 640px){
+    .banner-grid{
+        grid-template-columns: 1fr;
+    }
+    .banner-block{
+        aspect-ratio: 4 / 5;
+    }
+}
+

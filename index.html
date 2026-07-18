@@ -20,7 +20,7 @@
             <div class="barra">
     
                 <a class="logo" href="index.html">
-                    <img src="img/logo/logo0.jpg" class="logo__imagen">
+                    <img src="img/logo/logo3.png" class="logo__imagen">
                 </a>
     
                 <nav class="navegacion">
@@ -32,22 +32,48 @@
                         </a>
                     
                         <div class="submenu">
-                            <a href="remeras.html" class="submenu__enlace">Remeras</a>
-                            <a href="pantalones.html" class="submenu__enlace">Pantalones</a>
-                            <a href="chalecos.html" class="submenu__enlace">Chalecos</a>
-                            <a href="camperas.html" class="submenu__enlace">Camperas</a>
+                            <a href="/Productos/remeras.html" class="submenu__enlace">Remeras</a>
+                            <a href="/Productos/pantalones.html" class="submenu__enlace">Pantalones</a>
+                            <a href="/Productos/chalecos.html" class="submenu__enlace">Chalecos</a>
+                            <a href="/Productos/camperas.html" class="submenu__enlace">Camperas</a>
                         </div>
                     
                     </div>
-                    <a class="navegacion__enlace">Mas Info</a>
-                    <a class="navegacion__enlace">Nosotros</a>
+
+                    <div class="dropdown">
+                        <a class="navegacion__enlace">Mas Info ▼</a>
+                        <div class="submenu">
+                            <a href="../Mas Info/envios.html" class="submenu__enlace">Envios</a>
+                            <a href="../Mas Info/tabla-talles.html" class="submenu__enlace">Tabla de Talles</a>
+                            <a href="../Mas Info/como-comprar.html" class="submenu__enlace">Como Comprar</a>
+                            <a href="../Mas Info/contacto.html" class="submenu__enlace">Contacto</a>
+                        </div>
+                    </div>
+                    <a href="personalizados.html" class="navegacion__enlace">Personalizados</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                 </nav>
     
-                    <div class="iconos">
-                        <a><img src="img/iconos/lupa1.png"></a>
-                        <a><img src="img/iconos/icons8-cliente-80.png"></a>
-                        <a><img src="img/iconos/icons8-carrito-de-compras-50.png"></a>
-                    </div>
+                <div class="iconos">
+                    <a href="#" class="icono-link" aria-label="Buscar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="icono-link" aria-label="Mi cuenta">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="icono-link" aria-label="Carrito">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.5 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"></path>
+                        </svg>
+                    </a>
+                </div>
                 
     
             </div>
@@ -57,49 +83,59 @@
     
 <!----------------------- BANNER-----------------------> 
 
-    <section class="banner">
-        <div class="slide active">
-            <img src="img/Banners/banner2.png">
-            <div class="contenido-banner">                
-                <a class="btn-banner">Nueva Colección</a>
+<section class="banner">
+    <div class="slide active">
+        <div class="banner-grid">
+            
+            <div class="banner-block">
+                <img src="img/Camperas/camperas3.jpeg" alt="">
+                
             </div>
+            
+            <div class="banner-block">
+                <video autoplay muted loop playsinline>
+                    <source src="img/Camperas/camperavideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="banner-block">
+                <img src="img/Camperas/camperas4.jpeg" alt="">
+            </div>
+
         </div>
-        
-    </section>
+    </div>
+</section>
 
 <!----------------------- CATEGORIAS ----------------------->
 
     <section class="categorias">
-        <div class="categoria-card">
+        <a href="/Productos/camperas.html" class="categoria-card">
             <img src="img/Camperas/campera1.jpeg">
             <div class="categoria-titulo">
                 <h3>CAMPERAS</h3>
             </div>
-        </div>
-    
-        <div class="categoria-card">
+        </a>
+
+        <a href="/Productos/pantalones.html" class="categoria-card">
             <img src="img/Pantalones/pantalonesmore1.png">
             <div class="categoria-titulo">
                 <h3>PANTALONES</h3>
             </div>
-        </div>
-    
-        <div class="categoria-card">
+        </a>
+
+        <a href="/Productos/chalecos.html" class="categoria-card">
             <img src="img/Chalecos/chalecos.jpg">
             <div class="categoria-titulo">
                 <h3>CHALECOS</h3>
             </div>
-        </div>
+        </a>
 
-        <div class="categoria-card">
+        <a href="/Productos/remeras.html" class="categoria-card">
             <img src="img/Remeras/remeras.jpg">
             <div class="categoria-titulo">
                 <h3>REMERAS</h3>
             </div>
-        </div>
-
-
-
+        </a>
     </section>
 
 <!----------------------- BENEFICIOS ----------------------->
@@ -107,17 +143,17 @@
     <section class="beneficios">
         <div class="beneficio">            
             <h3>ENVÍO GRATIS A TODO EL PAÍS</h3>
-            <p>en compras superiores a $80.000</p>
+            <p>En compras superiores a $80.000</p>
         </div>
     
         <div class="beneficio">            
             <h3>ATENCIÓN PERSONALIZADA</h3>
-            <p>te asesoramos en tu compra</p>
+            <p>Te asesoramos en tu compra</p>
         </div>
     
         <div class="beneficio">            
             <h3>15% DE DESCUENTO</h3>
-            <p>pagando con transferencia o depósito</p>
+            <p>Pagando con transferencia o depósito</p>
         </div>
     </section>
 
@@ -155,7 +191,7 @@
             <div class="footer-columna">
                 <h3>Seguinos</h3>
                 <div class="redes">
-                    <a href="https://www.instagram.com/ateliermore_/" target="_blank">Instagram</a>
+                    <a href="https://www.instagram.com/ateliermore__/" target="_blank">Instagram</a>
                     
                 </div>
             </div>
